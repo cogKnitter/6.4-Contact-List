@@ -1,9 +1,15 @@
 import React from 'react'
+import PreviewList from './PreviewList'
 
 export default React.createClass({
   render() {
     return (
-      <h1 className="heading">Hello!</h1>
+      <main>
+        <h1 className="list__heading">My Peeps</h1>
+        <div>
+          <PreviewList/>
+        </div>
+      </main>
     )
   }
 })
