@@ -7,9 +7,9 @@ import App from '../modules/App';
 
 jest.unmock('../modules/App');
 
-describe('Boilerplate', () => {
+describe('App /', () => {
 
-  it('contains hello text', () => {
+  it('contains My peeps', () => {
     // This places our component into our test to find off of
     var appRendered = TestUtils.renderIntoDocument(
       <App/>
