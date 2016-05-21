@@ -62,7 +62,8 @@
   font-size: 1.4rem; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  font-family: helvetica; }
 
 .list__heading {
   background-color: #2ecc71;
@@ -84,5 +85,14 @@ html {
   display: inline-block;
   vertical-align: top;
   margin-left: 1rem; }
+
+.detail__li {
+  font-size: 1.8rem;
+  line-height: 2;
+  list-style: none;
+  border-bottom: 1px solid rgba(127, 140, 141, 0.5); }
+
+.fa {
+  margin: 1rem; }
 
 /*# sourceMappingURL=main.css.map */
