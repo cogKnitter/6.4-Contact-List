@@ -3,20 +3,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import TestUtils from 'react-addons-test-utils';
-import PreviewList from '../modules/PreviewList';
+import Detail from '../modules/Detail';
 
-jest.unmock('../modules/PreviewList');
+jest.unmock('../modules/Detail');
 
-describe('PreviewList', () => {
+describe('Detail', () => {
 
-  it('contains an unorderder list', () => {
+  it('contains a list of details', () => {
     // This places our component into our test to find off of
+
     var listRendered = TestUtils.renderIntoDocument(
-      <PreviewList/>
+      <Detail/>
     )
     // find text within list
-    var list = TestUtils.findRenderedDOMComponentWithClass(listRendered, "contacts__list");
+    var list = TestUtils.findRenderedComponentWithType(listRendered, Detail);
     // assert it has text
-    expect(list.textContent).toBeDefined();
+    expect(list.props.params).toBeDefined();
   });
 });
