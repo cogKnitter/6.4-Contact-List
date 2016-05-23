@@ -10,6 +10,6 @@ render((
   <Router history={browserHistory}>
     <Route path="/" component={App}/>
     <Route path="/Detail" component={Detail}/>
-    <Route path="/Detail/:name/:email/:phone/:location" component={Detail}/>
+    <Route path="/Detail/:image/:name/:email/:phone/:location" component={Detail}/>
   </Router>
 ), document.getElementById('app'))

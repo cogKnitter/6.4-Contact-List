@@ -10,7 +10,7 @@ export default React.createClass({
       <div>
         <div className="detail__head">
           <h2><Link to="/"><i className="fa fa-arrow-left"/></Link></h2>
-          <img className="detail__img" src="../../../../images/anon_avatar.png"/>
+          <img className="detail__img" src={`../../../../../images/${detail.image}`}/>
         </div>
           <ul className="detail__items">
             <li className="detail__li"><i className="fa fa-user"/>{detail.name}</li>
