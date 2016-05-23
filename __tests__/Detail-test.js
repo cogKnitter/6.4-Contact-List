@@ -16,8 +16,8 @@ describe('Detail', () => {
       <Detail/>
     )
     // find text within list
-    var list = TestUtils.findRenderedComponentWithType(listRendered, Detail);
+    var detail = TestUtils.findRenderedComponentWithType(listRendered, Detail);
     // assert it has text
-    expect(list.props.params).toBeDefined();
+    expect(detail).toBeDefined();
   });
 });

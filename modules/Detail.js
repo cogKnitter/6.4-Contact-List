@@ -4,6 +4,8 @@ import {Link} from 'react-router'
 
 export default React.createClass({
   render() {
+    var detail = this.props.params;
+
     return (
       <div>
         <div className="detail__head">
@@ -11,10 +13,10 @@ export default React.createClass({
           <img className="detail__img" src="../../../../images/anon_avatar.png"/>
         </div>
           <ul className="detail__items">
-            <li className="detail__li"><i className="fa fa-user"/>{this.props.params.name}</li>
-            <li className="detail__li"><i className="fa fa-envelope"/>{this.props.params.email}</li>
-            <li className="detail__li"><i className="fa fa-mobile"/>{this.props.params.phone}</li>
-            <li className="detail__li"><i className="fa fa-globe"/>{this.props.params.location}</li>
+            <li className="detail__li"><i className="fa fa-user"/>{detail.name}</li>
+            <li className="detail__li"><i className="fa fa-envelope"/>{detail.email}</li>
+            <li className="detail__li"><i className="fa fa-mobile"/>{detail.phone}</li>
+            <li className="detail__li"><i className="fa fa-globe"/>{detail.location}</li>
           </ul>
       </div>
     )
