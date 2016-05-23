@@ -9,15 +9,17 @@ jest.unmock('../modules/Detail');
 
 describe('Detail', () => {
 
-  it('contains a list of details', () => {
+  it('contains the name of selected contact', () => {
     // This places our component into our test to find off of
-
-    var listRendered = TestUtils.renderIntoDocument(
-      <Detail/>
+    var testParams ={
+      name: "Sasquatch"
+    }
+    var nameRendered = TestUtils.renderIntoDocument(
+      <Detail params={testParams}/>
     )
     // find text within list
-    var detail = TestUtils.findRenderedComponentWithType(listRendered, Detail);
+    var detailName = TestUtils.findRenderedDOMComponentWithClass(nameRendered, "detail__name");
     // assert it has text
-    expect(detail).toBeDefined();
+    expect(detailName.textContent).toEqual("Sasquatch");
   });
 });
